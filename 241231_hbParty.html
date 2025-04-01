@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日派對 (練習)</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/my.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+
+<body>
+
+    <!-- section 01 友站連結 -->
+    <section id="s01" class="bg-secondary py-1">
+        <div class="container">
+            <div class="text-end">
+                <a href="#">
+                    <i class="fa-brands fa-square-facebook text-primary"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-line text-success"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-square-x-twitter text-dark"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- section 02 主選單 -->
+
+    <section id="s02" class="bg-dark">
+        <div class="container">
+            <!-- 更改為bg-dark navbar-dark -->
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <div class="container-fluid">
+                    <div >
+                        <img src="images/cake02.png" class="img-fluid  rounded-2 wow animate__rubberBand"
+                        data-wow-duration="2s" data-wow-delay="0s" data-wow-iteration="5" alt="...">
+
+                    </div>
+                    <!-- <a class="navbar-brand" href="#">
+                        <i class="fa-solid fa-cake-candles text-warning fa-2x"></i>
+
+                    </a> -->
+                    <!-- 漢堡條 -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#s05">關於我</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#s06">方案介紹</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#s10">預約流程</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#s11">活動預約</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#s12">常見FAQ</a>
+                            </li>
+
+                        </ul>
+                        <div>
+                            <!--bootstrap Live demo -->
+                            <button class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#registerModal">
+                                註冊</button>
+                            <button class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">登入</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- bootstrap Live demo -->
+    <!-- registerModal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- modal-xl 長的輸入框 -->
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <!-- 同按鈕顏色 -->
+                <div class="modal-header text-bg-warning">
+                    <h1 class="modal-title fs-4 fw-900" id="exampleModalLabel">會員註冊</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <!-- 配合下方mt-auto 所以要有d-flex flex-column，將"同意"固定下方 -->
+                            <div class="d-flex flex-column h-100">
+                                <div class="display-6 fw-900 my-3">會員守則</div>
+                                <p><span class="text-primary">1.預約規則</span><br>
+                                    活動預約需提前7天提出，臨時更改需提前5天聯繫客服。</p>
+                                <p><span class="text-primary">2.取消政策</span><br>
+                                    取消預約需提前5天通知，否則訂金將無法退還。</p>
+                                <p><span class="text-primary">3.照片使用</span><br>
+                                    公司有權將活動照片用於宣傳，若不願意需提前告知。</p>
+                                <p><span class="text-primary">4.解釋權</span><br>
+                                    最終解釋權歸公司所有，會員需遵守規則及政策。</p>
+
+                                <div class="form-check mt-auto">
+                                    <input type="checkbox" class="form-check-input is-invalid">
+                                    <label for="" class="form-check-label">不同意</label>
+                                    <div class="invalid-feedback">須同意始能註冊!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">帳號</label>
+                                <input type="text" class="form-control is-invalid">
+                                <div class="valid-feedback">符合規則</div>
+                                <div class="invalid-feedback">不符合規則</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">密碼</label>
+                                <input type="password" class="form-control is-invalid">
+                                <div class="valid-feedback">符合規則</div>
+                                <div class="invalid-feedback">不符合規則</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">確認密碼</label>
+                                <input type="password" class="form-control is-invalid">
+                                <div class="valid-feedback">符合規則</div>
+                                <div class="invalid-feedback">不符合規則</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Email</label>
+                                <input type="email" class="form-control is-invalid">
+                                <div class="valid-feedback">符合規則</div>
+                                <div class="invalid-feedback">不符合規則</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- loginModal -->
+    <!-- 登入輸入帳密過程不能有提示，要按確認才能開始驗證 -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- 同按鈕顏色 -->
+                <div class="modal-header text-bg-success">
+                    <h1 class="modal-title  fs-4 fw-900" id="exampleModalLabel">會員登入</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="" class="form-label">帳號</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">密碼</label>
+                        <input type="password" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section 03 -->
+    <!-- bootstrap With captions -->
+    <section id="s03">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- bg-cover + vh-100 -->
+                <!-- active保留第一個段落，其他段落拿掉-->
+                <div class="carousel-item bg-cover active"
+                    style="height: 65vh; background-image: url(images/hb06.jpg);">
+                    <div class="carousel-caption d-none d-md-block p-3 rounded-4 shadow-lg"
+                        style="background-color: rgba(0, 0, 0, 0.2);">
+                        <h3 class="fw-900">野餐趣</h3>
+                        <p class="fs-5 tex-001">
+
+                            親子DIY、全家福拍攝，快來享受歡樂時光，還有9折優惠及抽獎大禮包！
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item bg-cover" style="height: 65vh; background-image: url(images/hb03.jpg);">
+                    <div class="carousel-caption d-none d-md-block p-3 rounded-4 shadow-lg"
+                        style="background-color: rgba(0, 0, 0, 0.2);">
+                        <h3 class="fw-900">聯誼派對</h3>
+                        <p class="fs-5 tex-001">
+                            輕鬆氛圍、互動遊戲、拍照打卡，認識新朋友，還有專屬小禮品和抽獎機會！
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item bg-cover" style="height: 65vh; background-image: url(images/hb06.jpg);">
+                    <div class="carousel-caption d-none d-md-block p-3 rounded-4 shadow-lg"
+                        style="background-color: rgba(0, 0, 0, 0.2);">
+                        <h3 class="fw-900">新朋友優惠</h3>
+                        <p class="fs-5 tex-001">
+                            首次預訂生日派對服務，立即享 9折 優惠！讓您的孩子擁有一場專屬的夢幻派對
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item bg-cover" style="height: 65vh; background-image: url(images/hb03.jpg);">
+                    <div class="carousel-caption d-none d-md-block p-3 rounded-4 shadow-lg"
+                        style="background-color: rgba(0, 0, 0, 0.2);">
+                        <h3 class="fw-900">春日限定</h3>
+                        <p class="fs-5 tex-001">
+                            選擇春季限定主題「花漾夢幻派對」，立即享受 95折 優惠，還可獲得免費花環一只！
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item bg-cover" style="height: 65vh; background-image: url(images/hb06.jpg);">
+                    <div class="carousel-caption d-none d-md-block p-3 rounded-4 shadow-lg"
+                        style="background-color: rgba(0, 0, 0, 0.2);">
+                        <h3 class="fw-900">感恩回饋</h3>
+                        <p class="fs-5 tex-001">
+                            老客戶專屬福利：再次預訂生日派對服務，即可享 95折，並贈送 3張精美派對照片！
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+
+
+    <!-- section 04 -->
+
+    <section id="s04" class="bg-001">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center my-4">
+                    <i class="fa-brands fa-fly fa-7x text-danger d-none d-md-block"></i>
+                    <h2 class=" fw-900 my-3">一站式方案</h2>
+                    <p>從生日到婚禮，我們幫您輕鬆規劃每一場活動。</p>
+                </div>
+                <div class="col-md-4 text-center my-4">
+                    <i class="fa-brands fa-waze fa-7x text-primary d-none d-md-block"></i>
+                    <h2 class=" fw-900 my-3">便捷預約系統</h2>
+                    <p>快速比較價格與評價，輕鬆預訂完美派對。</p>
+                </div>
+                <div class="col-md-4 text-center my-4">
+                    <i class="fa-solid fa-crown fa-7x text-warning d-none d-md-block"></i>
+                    <h2 class="fw-900 my-3">定制專屬派對</h2>
+                    <p>根據需求，為您量身打造難忘的派對體驗。</p>
+                </div>
+            </div>
+            </container>
+    </section>
+
+    <!-- section 05 關於我-->
+    <section id="s05">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-5 bg-cover" style="background-image: url(images/hb02.jpg);height: 1000px;"></div>
+                <div class="col-7 p-5">
+
+                    <div class="h1 text-center"><span class="tx-003">全球首創</span>派對預約平台</div>
+
+                    <br><br>
+                    <h5 class="mb-1 text-center">
+                        我們提供生日派對、婚禮、公司活動等多樣化派對服務。<br>用戶可以輕鬆瀏覽多種主題、選擇場地、預訂餐點、布置和專業攝影等服務，<br>一鍵完成派對規劃，節省時間與精力，打造專屬難忘的派對體驗。
+                    </h5>
+
+                    <br><br>
+                    <div class="row mt-5">
+                        <div class="col-md-3">
+                            <div class="h4 fw-900">完成派對</div>
+                            <!-- counter對應下方 counterup -->
+                            <div class="h1 fw-900 counter01">555 <span class="h4">/場</span></div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <div class="h4 fw-900">回購率</div>
+                            <div class="h1 fw-900 counter02">44 <span class="h4">%</span></div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <div class="h4 fw-900">主題數量</div>
+                            <div class="h1 fw-900 counter03">33 <span class="h4">/種</span></div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <div class="h4 fw-900">顧客人數</div>
+                            <div class="h1 fw-900 counter04">2220 <span class="h4">人</span></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- section 06 方案介紹-->
+    <br><br>
+    <section id="s06">
+        <div class="container">
+            <div class="display-3 fw-900 text-center my-3 tx-004">方案介紹</div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card shadow rounded-1" style="transform: scale(0.9); transform-origin: center;">
+                        <div class="card-body text-center">
+                            <img src="images/hb03.jpg" class="img-fluid rounded-2" alt="">
+                            <h2 class="card-title tx-006">奢華盛典</h2>
+                            <h5 class="card-text">價格：NT$100,000 起</h5>
+                            <ul class="text-start">
+                                <li class="card-text">巨型主題蛋糕（多層與雕塑設計）</li>
+                                <li class="card-text">VIP 專屬宴會餐飲服務（包含私人廚師）</li>
+                                <li class="card-text">無人機航拍與動態影片製作</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow rounded-1" style="transform: scale(0.9); transform-origin: center;">
+                        <div class="card-body text-center">
+                            <img src="images/hb04.jpg" class="img-fluid rounded-2" alt="">
+                            <h2 class="card-title tx-006">夢幻盛宴</h2>
+                            <h5 class="card-text">價格：NT$66,000 起</h5>
+                            <ul class="text-start">
+                                <li class="card-text">豪華主題蛋糕（多層次設計）</li>
+                                <li class="card-text">VIP 頂級餐飲服務（含精緻甜點與飲品）</li>
+                                <li class="card-text">專業攝影與錄影服務（全紀錄影片剪輯）</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow rounded-1 " style="transform: scale(0.9); transform-origin: center;">
+                        <div class="card-body text-center">
+                            <img src="images/hb05.jpg" class="img-fluid rounded-2" alt="">
+                            <h2 class="card-title tx-006">歡樂時光</h2>
+                            <h5 class="card-text">價格：NT$36,000 起</h5>
+                            <ul class="text-start">
+                                <li class="card-text">主題派對佈置（包含氣球拱門與主題背景）</li>
+                                <li class="card-text">VIP 中型生日蛋糕（8吋）</li>
+                                <li class="card-text">現場拍照服務（30張修圖）</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow rounded-1 " style="transform: scale(0.9); transform-origin: center;">
+                        <div class="card-body text-center">
+                            <img src="images/hb06.jpg" class="img-fluid rounded-2" alt="">
+                            <h2 class="card-title tx-006">幸福起點</h2>
+                            <h5 class="card-text">價格：NT$28,000 起</h5>
+                            <ul class="text-start">
+                                <li class="card-text">基本場地佈置（氣球與簡單桌椅佈置）</li>
+                                <li class="card-text">VIP 標準生日蛋糕（6吋）</li>
+                                <li class="card-text">派對主持人（1小時）</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+
+    <!-- section 07 團隊介紹 -->
+    <br><br><br>
+    <section id="s07">
+        <div class="container">
+            <div class="display-3 fw-900 text-center my-3 tx-004">團隊介紹</div>
+            <div class="row">
+                <div class="col-md-6 mt-5">
+                    <div class="row align-items-center">
+                        <div class="col-4">
+                            <div class="bg-info rounded-circle bg-cover myrollerl wow animate__zoomInUp"
+                                data-wow-duration="1s" data-wow-delay="0s" data-wow-iteration="1"
+                                style="width: 120px; height: 120px; background-image: url(images/job06.jpg); ">
+                                <h5 class="rollerl text-light">派對策劃師</h5>
+                            </div>
+                        </div>
+                        <div class="col-8 ">
+
+                            <div class="h3 text-warning fw-900 my-3">派對策劃師</div>
+                            <p class="fw-900 my-3">用專業與創意打造客製化派對，實現客人的每個夢想細節，確保每場派對都獨一無二且令人難忘。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <div class="row align-items-center">
+                        <div class="col-4">
+                            <div class="bg-info rounded-circle bg-cover myrollerl wow animate__zoomInUp"
+                                data-wow-duration="2s" data-wow-delay="0s" data-wow-iteration="1"
+                                style="width: 120px; height: 120px; background-image: url(images/job10.jpg); ">
+                                <h5 class="rollerl text-light">攝影師</h5>
+                            </div>
+                        </div>
+                        <div class="col-8 ">
+                            <div class="h3 text-warning fw-900 my-3">攝影師</div>
+                            <p class="fw-900 my-3">用鏡頭捕捉派對中的每份歡樂與感動，記錄每個珍貴瞬間，為客人留下永恆而美好的回憶。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <div class="row align-items-center">
+                        <div class="col-4">
+                            <div class="bg-info rounded-circle bg-cover myrollerl wow animate__zoomInUp"
+                                data-wow-duration="3s" data-wow-delay="0s" data-wow-iteration="1"
+                                style="width: 120px; height: 120px; background-image: url(images/job03.jpg); ">
+                                <h5 class="rollerl text-light">妝髮設計師</h5>
+                            </div>
+                        </div>
+                        <div class="col-8 ">
+                            <div class="h3 text-warning fw-900 my-3">妝髮設計師</div>
+                            <p class="fw-900 my-3">以精緻妝髮提升派對主角的自信與魅力，讓每位壽星及家人都在派對中閃耀動人。</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 mt-5">
+                    <div class="row align-items-center">
+                        <div class="col-4">
+                            <div class="bg-info rounded-circle bg-cover myrollerl wow animate__zoomInUp"
+                                data-wow-duration="4s" data-wow-delay="0s" data-wow-iteration="1"
+                                style="width: 120px; height: 120px; background-image: url(images/job11.jpg); ">
+                                <h5 class="rollerl text-light">客服團隊</h5>
+                            </div>
+                        </div>
+                        <div class="col-8 ">
+                            <div class="h3 text-warning fw-900 my-3">客服團隊</div>
+                            <p class="fw-900 my-3">用耐心與貼心服務，快速解答客人的需求與疑問，確保每場派對規劃順利無憂。</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- section 08 客戶反饋-->
+    <br><br>
+    <section id="s08">
+        <div class="container ">
+            <div class="display-3 fw-900 text-center mt-3 my-3 tx-004">客戶推薦</div>
+            <div class="row">
+
+
+                <div class="col-lg-6 mt-5">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="images/toy04.jpg" class="img-fluid  rounded-circle " alt="...">
+
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title tx-006">張小姐</h3>
+                                    <p class="card-text ">「派對安排得非常完善，場地布置精緻，氣氛溫馨，全家人都非常滿意，下次還會選擇這裡！</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-5">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="images/toy04.jpg" class="img-fluid  rounded-circle " alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title tx-006">李先生</h3>
+                                    <p class="card-text">「主持人專業又風趣，活動充滿歡樂，小朋友們都玩得很開心，感謝提供這麼棒的派對服務！」</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 ">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="images/toy04.jpg" class="img-fluid  rounded-circle " alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title tx-006">陳先生</h3>
+                                    <p class="card-text">「攝影師拍攝技術一流，每張照片都很有紀念價值，整個派對的回憶完美被記錄下來！」</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6 ">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="images/toy04.jpg" class="img-fluid  rounded-circle " alt="...">
+
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title tx-006">吳小姐</h3>
+                                    <p class="card-text">「蛋糕和餐點都非常美味，場地布置更是驚艷，派對超過我們的期待，值得大力推薦！」</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- section 09 收費方案 -->
+    <!-- boostrap Description list alignment -->
+    <!-- section 08版面比例為7:5 -->
+    <section id="s09">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+
+                <div class="col-lg-7 p-5 d-flex flex-column justify-content-center align-items-center text-center">
+                    <h1 class="h1 mb-4">
+                        <span class="tx-003">多元化派對佈置服務</span>
+                    </h1>
+                    <h5 class="mb-4">
+                        我們為您提供多樣化的額外派對服務，滿足各種特殊需求，打造專屬回憶：
+                    </h5>
+
+                    <br><br>
+                    <ul class="text-start">
+                        <li class="mb-3">
+                            <strong>性別揭曉派對：</strong>透過創意佈置與互動環節，讓家人朋友共同參與，揭曉寶寶性別的驚喜時刻，充滿愛與期待的氛圍。
+                        </li>
+                        <li class="mb-3">
+                            <strong>抓周派對：</strong>結合傳統與現代，為寶寶的重要成長里程碑量身定制，提供專業的佈置、趣味互動以及專屬主題布景。
+                        </li>
+                        <li class="mb-3">
+                            <strong>婚禮佈置：</strong>從溫馨小型婚禮到盛大婚宴，無論是花藝、燭光還是主題設計，我們的團隊致力於實現新人心中的夢幻婚禮。
+                        </li>
+                        <!-- <li class="mb-4">
+                            <strong>成果發表會：</strong>專業打造學術成果、創作展示或頒獎典禮的專屬舞台，讓活動更加隆重與具有儀式感。
+                        </li> -->
+                    </ul>
+                    <!-- 按鈕 -->
+                    <button class="btn btn-outline-danger">查看更多</button>
+                </div>
+
+                <div class="col-5 bg-cover" style="background-image: url(images/hb01.jpg);height: 1000px;"></div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- section 10 派對準備流程 -->
+    <!-- background-attachment: fixed 卷軸時固定背景圖 -->
+        <section id="s10" class="bg-secondary py-5 bg-cover"
+            style="background-image: url(images/hb06.jpg); background-attachment: fixed;">
+            <div class="container">
+                <div class="row justify-content-end align-items-center">
+                    <div class="col-md-3">
+                        
+                            <div class="h1 tx-006 display-5 fw-900">派對流程介紹</div>
+                            <p class="text-white fs-5">
+                                安排生日派對時，請提前確認地點，選擇主題並規劃活動。預定美食佳餚，並及時發送邀請函，確保每位賓客都能盡興而歸。</p>
+                        
+                    </div>
+                    <div class="row col-md-8">
+                        <!-- align-items-center垂直置中 -->
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <div class="bg-008 text-white  rounded-3 shadow-lg">
+                                    <h2>步驟一：選定日期與主題</h2>
+                                    <p>選擇派對日期與時間，並依興趣設定主題（如動物或交通工具），確保早安排服務與場地。</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class=" bg-cover rounded-3 shadow-lg bg-cover"
+                                    style="height: 220px; background-image: url(images/hb10.jpg);"></div>
+                            </div>
+                        </div>
+                        <!-- flex-row-reverse圖文相反 -->
+                        <div class="row align-items-center flex-row-reverse ">
+                            <div class="col-6">
+                                <div class="bg-008 text-white  rounded-3 shadow-lg">
+                                    <h2>步驟二：預定專業服務</h2>
+                                    <p>預約攝影師、化妝師與服裝等專業服務，確保派對中的每個細節都完美展現。</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class=" bg-cover rounded-3 shadow-lg bg-cover"
+                                    style="height: 220px; background-image: url(images/hb07.jpg);"></div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center ">
+                            <div class="col-6">
+                                <div class="bg-008 text-white  rounded-3 shadow-lg">
+                                    <h2>步驟三：規劃活動與餐飲</h2>
+                                    <p>設計主題遊戲、活動及互動環節，同時規劃餐飲與蛋糕，提升派對趣味性與整體體驗。</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class=" bg-cover rounded-3 shadow-lg"
+                                    style="height: 220px; background-image: url(images/hb15.jpg);"></div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center flex-row-reverse ">
+                            <div class="col-6">
+                                <div class="bg-008 text-white  rounded-3 shadow-lg">
+                                    <h2>步驟四：設計邀請與準備感謝禮</h2>
+                                    <p>設計主題邀請函並確認出席人數，為來賓準備回禮以感謝他們的參與。</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class=" bg-cover rounded-3 shadow-lg"
+                                    style="height: 220px; background-image: url(images/job08.jpg);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+    <br><br><br>
+    <!-- section 11 客戶需求表單 -->
+    <section id="s11">
+        <div class="container my-3">
+            <div class="row">
+                <div class="col-md-12 card border-warning">
+                    <div class="display-6  fw-900 bg-001 card-header text-center">基本資料</div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">姓名</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">電話</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Email</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-12 card border-warning mt-3">
+                    <div class="display-6  fw-900 bg-001 card-header text-center">預約項目</div>
+                    <div class="mb-3">
+
+                        <label for="partyDateTime" class="h5">預約時間</label>
+                        <input type="datetime-local" id="partyDateTime" class="form-control">
+
+                    </div>
+
+
+                    <div class="mb-3">
+                        <div class="h5">派對地點</div>
+                        <select name="selectCity" id="selectCity" class="form-select form-select-lg">
+                            <option value="" class="text-center" selected disabled>---選擇縣市---</option>
+                            <option value="">台中市</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <select name="selectArea" id="selectArea" class="form-select form-select-lg">
+                            <option value="" class="text-center" selected disabled>---選擇鄉鎮名稱---</option>
+                            <option value="">南屯區</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="請提供完整地址">
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="h5">派對方案</div>
+                        <select name="" id="" class="form-select form-select-lg">
+                            <option value="" class="text-center" selected disabled>---請選擇 預約方案---</option>
+                            <option value="奢華盛典">奢華盛典</option>
+                            <option value="夢幻盛宴">夢幻盛宴</option>
+                            <option value="歡樂時光">歡樂時光</option>
+                            <option value="幸福起點">幸福起點</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <div class="h5">派對主題</div>
+                        <select name="" id="" class="form-select form-select-lg">
+                            <option value="" class="text-center" selected disabled>---請選擇 派對主題---</option>
+                            <option value="日式典雅風">日式典雅風</option>
+                            <option value="露營探險風">露營探險風</option>
+                            <option value="太空銀河風">太空銀河風</option>
+                            <option value="英雄漫威風">英雄漫威風</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+
+                        <label for="" class="form-label h5">人數</label>
+                        <input type="number" min="1" max="30" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="h5">備註</div>
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg  " placeholder="555" id="note">
+                            <label for="" class="form-label">---想對我們說的話---</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="" class="form-label h5">附加項目:</label>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="chk01" name="chk01" value="粉圓">
+                            <label for="chk01" class="form-check-label">是否設計邀請卡</label>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="chk01" name="chk01" value="QQ">
+                            <label for="chk01" class="form-check-label">是否加購感謝小禮品</label>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="text-center mt-2">
+                <button class="btn btn-outline-success">送出</button>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- section 12 客戶反饋-->
+    <br><br><br>
+    <section id="s12">
+        <div class="container">
+            <div class="display-3 fw-900 text-center mt-2 my-3 tx-004 according-flush">常見問題FAQ</div>
+
+            <div class="row ">
+                <div class="col-12 mt-5">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading01">
+                                <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse01" aria-expanded="false" aria-controls="collapse01">
+                                    1.如何預訂生日派對服務？
+                                </button>
+                            </h2>
+                            <div id="collapse01" class="accordion-collapse collapse" aria-labelledby="heading01"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">您可以<strong>透過我們的網站或聯繫客服</strong>，選擇日期、主題與所需服務完成預訂。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 mt-3">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading02">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse02" aria-expanded="false" aria-controls="collapse02">
+                                    2.派對需要提前多長時間預訂？
+                                </button>
+                            </h2>
+                            <div id="collapse02" class="accordion-collapse collapse" aria-labelledby="heading02"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">建議至少<strong>提前一個月預訂</strong>，以確保場地與服務的可用性。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3 ">
+                    <div class="accordion " id="accordionExample">
+                        <div class="accordion-item ">
+                            <h2 class="accordion-header" id="heading03">
+                                <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse03" aria-expanded="false" aria-controls="collapse03">
+                                    3.是否提供客製化派對主題？
+                                </button>
+                            </h2>
+                            <div id="collapse03" class="accordion-collapse collapse" aria-labelledby="heading03"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">是的！我們可以根據您的需求設計專屬主題與布置方案。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 mt-3">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading04">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse04" aria-expanded="false" aria-controls="collapse04">
+                                    4.如果需要更改派對日期，怎麼辦？
+                                </button>
+                            </h2>
+                            <div id="collapse04" class="accordion-collapse collapse" aria-labelledby="heading04"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">請您盡快聯繫客服，我們將協助更改。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <br><br><br>
+    <!-- section 13 客戶需求表單 -->
+ 
+    <section id="s13">
+        <div class="container">
+            <div class="display-3 fw-900 text-center my-3 tx-004">分店位置</div>
+            <div class="row">
+                <div class="col-md-6 mt-4">
+                    <div class="row align-items-center">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.7957433087104!2d120.60055390000001!3d24.178895200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693e1e5070a7a7%3A0xa462167a0845084d!2z6Lev5oCd576p5pWZ5aCC!5e0!3m2!1szh-TW!2stw!4v1736846751758!5m2!1szh-TW!2stw"
+                            width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="rounded-5"></iframe>
+
+                        <div class="col-12">
+                            <div class=" rounded-2 bg-cover wow animate__zoomInUp" data-wow-duration="1s"
+                                data-wow-delay="0s" data-wow-iteration="1">
+
+                                <div class="h3 text-warning fw-900 my-3 text-center">東海教堂店</div>
+                                <ul>
+                                    <li><strong>服務內容：</strong>生日派對規劃、主題佈置、專業攝影、婚禮佈景</li>
+                                    <li><strong>聯絡電話：</strong>04-7777-7777</li>
+                                    <li><strong>電子郵件：</strong>info@happymoments.com.tw</li>
+                                    <li><strong>營業時間：</strong>
+                                        <ul>
+                                            <li>平日：10:00 AM - 7:00 PM</li>
+                                            <li>週六：9:00 AM - 12:00 PM</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 mt-4">
+                    <div class="row align-items-center">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17471.908576655904!2d120.65677996840115!3d24.161570319037708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d78069134cb%3A0xf7a65bba8f974f36!2z5ZyL56uL6Ieq54S256eR5a245Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1737025674980!5m2!1szh-TW!2stw" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-5"></iframe>
+
+                        <div class="col-12">
+                            <div class=" rounded-2 bg-cover wow animate__zoomInUp" data-wow-duration="2s"
+                                data-wow-delay="0s" data-wow-iteration="1">
+
+                                <div class="h3 text-warning fw-900 my-3 text-center">科博館店</div>
+                                <ul>
+                                    <li><strong>服務內容：</strong>生日派對規劃、主題佈置、專業攝影、抓周活動策劃</li>
+                                    <li><strong>聯絡電話：</strong>04-6666-6666</li>
+                                    <li><strong>電子郵件：</strong>info@happymoments.com.tw</li>
+                                    <li><strong>營業時間：</strong>
+                                        <ul>
+                                            <li>平日：10:00 AM - 7:00 PM</li>
+                                            <li>週六：9:00 AM - 12:00 PM</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- section 14 加入我們-->
+    <section id="s14">
+        <div class="row">
+            <div class="col-md-6 bg-cover mt-3" style="background-image: url(images/hb21.jpg);">
+                <div class="row ">
+                    <div class="d-flex justify-content-center">
+                        <div class="col-md-9 m-3 p-3 text-white rounded-3 shadow-lg bg-008">
+                       
+                        <small class="badge bg-005 wow animate__heartBeat" data-wow-duration="1s"
+                        data-wow-delay="0s" data-wow-iteration="infinite">JOIN US</small>
+                        <div class="h2 text-white fw-900 my-1">徵求 派對設計師一名</div>
+                        <p class="h2">待遇: <span class="display-5 text-white">55K</span>/月</p>
+                        <p class="text-white">工作內容:
+                            負責派對場地的佈置與設計，根據客戶需求規劃主題風格，選擇佈置材料如氣球、花藝、桌飾等，營造夢幻氛圍。需具備創意與美感，熟悉流行趨勢，並能在指定時間內完成佈置工作。協助確保現場整潔有序，並與團隊保持良好溝通。
+                        </p>
+                        <div class="text-center"> <button class="btn btn-danger ">加入我們</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-6 bg-cover mt-3" style="background-image: url(images/hb18.jpg);">
+                <div class="row ">
+                    <div class="d-flex justify-content-center">
+                        <div class="col-md-9 m-3 p-3 text-white rounded-3 shadow-lg bg-008">
+                       
+                        <small class="badge bg-005 wow animate__heartBeat" data-wow-duration="1s"
+                        data-wow-delay="0s" data-wow-iteration="infinite">JOIN US</small>
+                        <div class="h2 text-white fw-900 my-1">徵求 攝影助理一名</div>
+                        <p class="h2">待遇: <span class="display-5 text-white">40K</span>/月</p>
+                        <p class="text-white">工作內容:
+                            協助攝影師完成派對拍攝工作，包括布光、調整設備、現場道具擺放等。需協助客戶與來賓擺出自然的姿勢，記錄活動中的精彩時刻。整理與分類拍攝素材，並確保設備的使用與維護。具有耐心與良好的溝通能力，能在活動中快速回應需求。
+                        </p>
+                        <div class="text-center"> <button class="btn btn-danger ">加入我們</button></div>
+                       
+                    </div> 
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 15. 友站和版權 -->
+    <!--boostrap Base nav -->
+    <section id="s15">
+        <div class="container ">
+            <ul class="nav justify-content-center ">
+                <li class="nav-item">
+                    <a class="nav-link disabled">PowerBy Gin 250116</a>
+                </li>
+                <li class="nav-item">
+                    <!-- <a class="nav-link active" aria-current="page" href="#">山葉鋼琴</a> -->
+                    <a class="nav-link" href="#">心之芳庭</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">亞尼克蛋糕</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">薰衣草森林</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- https://github.com/donma/TaiwanAddressCityAreaRoadChineseEnglishJSON -->
+    <!-- 下載zip黨 -->
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <script>
+        var city;
+        var selectedCity; //記錄逤選取的縣市名稱
+        var selectedArea; //記錄逤選取的行政區名稱
+
+        $(function () {
+            // <!-- https://codepen.io/bfintal/pen/zYzOGpZ -->
+            //counterup2
+            const counterUp = window.counterUp.default
+
+            const callback = entries => {
+                entries.forEach(entry => {
+                    const el = entry.target
+                    if (entry.isIntersecting && !el.classList.contains('is-visible')) {
+                        counterUp(el, {
+                            duration: 2000,
+                            delay: 16,
+                        })
+                        el.classList.add('is-visible')
+                    }
+                })
+            }
+
+            const IO = new IntersectionObserver(callback, { threshold: 1 })
+
+            // 每個 counter 對應const el
+            const el01 = document.querySelector('.counter01')
+            IO.observe(el01)
+
+            const el02 = document.querySelector('.counter02')
+            IO.observe(el02)
+
+            const el03 = document.querySelector('.counter03')
+            IO.observe(el03)
+
+            const el04 = document.querySelector('.counter04')
+            IO.observe(el04)
+
+
+
+
+            // section 09 客戶需求表單-->縣市選單
+
+            $.ajax({
+                type: "GET",
+                url: "js/CityCountyData.json",
+                dataType: "json",
+                // 誰資料先好誰的資料先跑畫面
+                async: false,
+                success: function (data) {
+                    console.log(data);
+                    city = data;
+                },
+                error: function () {
+                    console.log("error-js/CityCountyData.json");
+                }
+            });
+
+            console.log(city);
+
+            // 顯示縣市選單
+            $("#selectCity").empty();
+            $("#selectCity").append(' <option value="" class="text-center" selected disabled>---選擇縣市---</option>');
+            city.forEach(function (item) {
+                console.log(item.CityName);
+
+                var strHTML = `<option value="${item.CityName}">${item.CityName}</option>`;
+                $("#selectCity").append(strHTML);
+            });
+
+
+            // 監聽縣市選單
+            $("#selectCity").change(function () {
+                console.log($(this).val());
+                selectedCity = $(this).val();
+
+                city.forEach(function (item) {
+                    if (item.CityName == selectedCity) {
+                        // 產生鄉鎮區選單
+                        $("#selectArea").empty();
+                        $("#selectArea").append('<option value="" class="text-center" selected disabled>---選擇鄉鎮名稱---</option>');
+
+                        item.AreaList.forEach(function (myitem) {
+                            console.log(myitem.AreaName);
+
+
+                            var strHTML = `<option value="${myitem.AreaName}">${myitem.AreaName}</option>`;
+                            $("#selectArea").append(strHTML);
+
+
+                        });
+                    }
+                });
+            });
+
+
+        });
+
+
+    </script>
+
+
+
+</body>
+
+</html>

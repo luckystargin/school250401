@@ -1,0 +1,27 @@
+(function () {
+
+    //一定要有以下設定
+    // <div id="navbar"></div>
+
+    // 載入nav.html
+    $("#navbar").load("250208-nav.html", function(){
+        // 取得當前頁面名稱
+        var currentPage=window.location.pathname.split("/").pop();
+        if(currentPage == ""){
+            currentPage = "/";
+        }
+        $(".nav-link").each(function(){
+            var link = $(this).attr("href");
+            if(link === currentPage){
+
+                // 加上active樣式
+                $(this).addClass("active");
+            }else{
+                // 移除其他active
+                $(this).removeClass("active");
+            }
+        });
+    });
+    
+
+})();
